@@ -14,13 +14,14 @@
 	transition: all 0.2s;
 	position: relative;
 	top: 5%;
-	background: #3ae6acd0;
+	background: white;
 	color: black !important;
 	animation: moveInBottom 0.5s ease-out 0.75s;
 	/* Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). */
     animation-fill-mode: backwards;
     outline: none;
-    user-select: none;
+	user-select: none;
+	cursor: pointer;
 }
 
 /* 
@@ -40,7 +41,7 @@
 	left: 0;
 	z-index: -1;
 	transition: all 0.4s;
-	background: #3ae6acd0;
+	background: white;
 }
 
 /* When hovering the button it scales and becomes opaque */

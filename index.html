@@ -1,4 +1,4 @@
-<!-- TODO: find backgroudn imgs -->
+<!-- TODO: build projects carousel -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +9,12 @@
     <title>Yen-Hung Lai Portfolio</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./button.css">
+    <link rel="stylesheet" href="./grid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Simplelightbox -->
+    <link rel="stylesheet" href="./node_modules/simplelightbox/dist/simplelightbox.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./node_modules/simplelightbox/dist/simple-lightbox.min.js"></script>
     <script src="https://kit.fontawesome.com/aff0d68d46.js"></script>
     <script defer src="./index.js"></script>
 </head>
@@ -17,31 +22,72 @@
 <body>
     <!-- Always have a container??? -->
     <div class="container">
-        <header class='landing'>
-            <div class='intro'>
-                <h1 class="animated fadeIn slower">My name is Yen-Hung Lai</h1><br>
+        <header id='home' class='landing'>
+            <div class='intro animated fadeIn slower'>
+                <h1>My name is <span>Yen-Hung Lai</span>.</h1><br>
+                <h1>I am a full stack web developer.</h1>
             </div>
-            <button class="btn">View my Resume</button>
+            <a target="_blank" href="./assets/resume.pdf" class="btn">View my Resume</a>
             <!-- Use id selector to redirect -->
             <a href="#section-1" class='down-arrows animated bounce'>
                 <i class="fas fa-angle-double-down fa-3x"></i>
             </a>
         </header>
+        <!-- TODO: hover effect and current section highlight -->
+        <nav class="top-nav">
+            <div>
+                <a href="#home">Home</a>
+                <a href="#section-1">About</a>
+                <a href="#section-2">Projects</a>
+                <a href="#section-3">Contacts</a>
+            </div>
+        </nav>
 
         <section id='section-1' class='about'>
             <h1>About</h1>
         </section>
+
         <section id='section-2' class='projects'>
             <h1>Projects</h1>
+            <div class="gallery">
+                <a href="./assets/img/fish.PNG" class="big"><img src="./assets/img/fish.PNG" alt="fish"
+                        title="<a style='color: white' target='_blank' href='https://fish-selling-app.firebaseapp.com'>Fish E-Commerce Application</a>"></a>
+                <a href="./assets/img/school.PNG" class="big"><img src="./assets/img/school.PNG" alt="school"
+                        title="<a style='color: white' target='_blank' href='https://capstone-spring-2019.gitlab.io/schoolprotector/#/'>School Security Evaluation Tool</a>"></a>
+                <a href="./assets/img/todo.PNG" class="big"><img src="./assets/img/todo.PNG" alt="todo"
+                        title="<a style='color: white' target='_blank' href='https://react-todo-items.netlify.com/'>Todo List Application</a>"></a>
+                <a href="./assets/img/ign.PNG" class="big"><img src="./assets/img/ign.PNG" alt="todo"
+                        title="<a style='color: white' target='_blank' href='https://mycodefoo9.netlify.com/'>IGN Code Foo 9 Frontend Application</a>"></a>
+            </div>
         </section>
+
         <section id='section-3' class='contacts'>
-            <h1>Contacts</h1>
+            <h1>Contact Me</h1><br>
+            <h2>Available for hire now</h2>
+            <a href="#home" class='up-arrows animated bounce'>
+                <i class="fas fa-angle-double-up fa-3x"></i>
+            </a>
         </section>
 
         <footer class="bottom-footer">
-            I am footer
+            <a href="https://www.facebook.com/jacoblai1029" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/yen-hung-lai-95782217a/" target="_blank"><i
+                    class="fab fa-linkedin fa-3x"></i></a>
+            <a href="https://github.com/YenHungLai" target="_blank"><i class="fab fa-github fa-3x"></i></a>
         </footer>
     </div>
+
+    <script>
+        $(function () {
+            const $gallery = $('.gallery a').simpleLightbox({
+                preloading: true,
+                widthRatio: 0.6,
+                heightRatio: 0.7,
+                disableScroll: false,
+                captionClass: 'sl-caption-addon'
+            });
+        });
+    </script>
 </body>
 
 </html>
