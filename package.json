@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "simplelightbox": "^1.17.2"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }
