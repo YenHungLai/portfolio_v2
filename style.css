@@ -81,7 +81,21 @@ section h1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
+}
+.about .diagram {
+	display: flex;
+	align-items: center;
+}
+.about i[class^="devicon"] {
+	font-size: 6rem;
+	margin: 0 25px;
+}
+.about img {
+	width: 222px;
+	height: 295px;
+	margin: 0 40px;
+	border-radius: 50%;
 }
 
 .projects {
@@ -138,6 +152,10 @@ section h1 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+.contacts div {
+	text-align: center;
+	display: none;
 }
 
 .up-arrows {
