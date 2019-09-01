@@ -25,8 +25,8 @@ a {
 	position: relative;
 	height: 100%;
 	/* FIXME: smooth scroll not working */
-	/* scroll-behavior: smooth; */
-	/* scroll-snap-type: y mandatory; */
+	/* scroll-behavior: smooth; 
+	scroll-snap-type: y mandatory; */
 }
 
 .landing {
@@ -59,6 +59,7 @@ a {
 	align-items: center;
 	height: 50px;
 	background-color: #061842;
+	z-index: 10;
 }
 .top-nav div {
 	margin-left: 15%;
@@ -72,10 +73,15 @@ a {
 /* Sections */
 section h1 {
 	text-transform: uppercase;
+	font-size: 32px;
 }
 
 .about {
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .projects {
@@ -92,15 +98,33 @@ section h1 {
 	grid-gap: 10px;
 	width: 70%;
 	margin-bottom: 10rem;
+	position: relative;
 }
 .projects .gallery img {
 	width: 355px;
 	height: 185px;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	z-index: 3;
 }
-.projects .gallery img:hover {
+/* .projects .gallery a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: white;
+	width: 355px;
+	height: 185px;
+	opacity: 0;
+	transition: all 0.2s ease-out;
+	z-index: 1;
+}
+.projects .gallery a:hover::before {
+	opacity: 1;
+} */
+.projects .gallery a:hover img {
 	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	opacity: 0.5;
 }
 
 .sl-caption-addon {
@@ -138,4 +162,8 @@ section h1 {
 }
 .bottom-footer i {
 	color: white;
+	transition: transform 0.3s ease-out;
+}
+.bottom-footer i:hover {
+	transform: scale(1.2);
 }

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./button.css">
     <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./tooltip.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- Simplelightbox -->
     <link rel="stylesheet" href="./node_modules/simplelightbox/dist/simplelightbox.min.css">
@@ -45,19 +46,27 @@
 
         <section id='section-1' class='about'>
             <h1>About</h1>
+            <h2>...</h2>
         </section>
 
         <section id='section-2' class='projects'>
             <h1>Projects</h1>
             <div class="gallery">
-                <a href="./assets/img/fish.PNG" class="big"><img src="./assets/img/fish.PNG" alt="fish"
-                        title="<a style='color: white' target='_blank' href='https://fish-selling-app.firebaseapp.com'>Fish E-Commerce Application</a>"></a>
-                <a href="./assets/img/school.PNG" class="big"><img src="./assets/img/school.PNG" alt="school"
+                <a href="./assets/img/fish.PNG" class="big"><span class="tooltip">Fish E-Commerce Application</span><img
+                        src="./assets/img/fish.PNG" alt="fish"
+                        title="<a style='color: white' target='_blank' href='https://fish-selling-app.firebaseapp.com'>Fish E-Commerce Application</a>">
+                </a>
+                <a href="./assets/img/school.PNG" class="big"><span class="tooltip">School Security Evaluation
+                        Tool</span><img src="./assets/img/school.PNG" alt="school"
                         title="<a style='color: white' target='_blank' href='https://capstone-spring-2019.gitlab.io/schoolprotector/#/'>School Security Evaluation Tool</a>"></a>
-                <a href="./assets/img/todo.PNG" class="big"><img src="./assets/img/todo.PNG" alt="todo"
-                        title="<a style='color: white' target='_blank' href='https://react-todo-items.netlify.com/'>Todo List Application</a>"></a>
-                <a href="./assets/img/ign.PNG" class="big"><img src="./assets/img/ign.PNG" alt="todo"
-                        title="<a style='color: white' target='_blank' href='https://mycodefoo9.netlify.com/'>IGN Code Foo 9 Frontend Application</a>"></a>
+                <a href="./assets/img/todo.PNG" class="big"><span class="tooltip">Todo list Application</span><img
+                        src="./assets/img/todo.PNG" alt="todo"
+                        title="<a style='color: white' target='_blank' href='https://react-todo-items.netlify.com/'>Todo List Application</a>">
+                </a>
+                <a href="./assets/img/ign.PNG" class="big"><span class="tooltip">IGN Code Foo 9 Application</span>
+                    <img src="./assets/img/ign.PNG" alt="todo"
+                        title="<a style='color: white' target='_blank' href='https://mycodefoo9.netlify.com/'>IGN Code Foo 9 Frontend Application</a>">
+                </a>
             </div>
         </section>
 
