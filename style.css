@@ -24,6 +24,7 @@ a {
 	/* Set to relative so footer will be at the bottom */
 	position: relative;
 	height: 100%;
+	/* overflow: hidden; */
 	/* FIXME: smooth scroll not working */
 	/* scroll-behavior: smooth; 
 	scroll-snap-type: y mandatory; */
@@ -40,7 +41,6 @@ a {
 }
 .landing .intro {
 	text-align: center;
-	font-size: 24px;
 }
 .landing span {
 	color: #ff3f74;
@@ -71,6 +71,9 @@ a {
 }
 
 /* Sections */
+section {
+	overflow: hidden;
+}
 section h1 {
 	text-transform: uppercase;
 	font-size: 32px;
@@ -85,9 +88,11 @@ section h1 {
 }
 .about .diagram {
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	width: 90%;
 }
-.about i[class^="devicon"] {
+.about i[class^='devicon'] {
 	font-size: 6rem;
 	margin: 0 25px;
 }
@@ -110,7 +115,6 @@ section h1 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 10px;
-	width: 70%;
 	margin-bottom: 10rem;
 	position: relative;
 }
@@ -184,4 +188,48 @@ section h1 {
 }
 .bottom-footer i:hover {
 	transform: scale(1.2);
+}
+
+@media (max-width: 1350px) {
+	.projects .gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.about .diagram {
+		flex-wrap: wrap;
+		/* margin-top: 0.5rem; */
+	}
+	.about img {
+		/* margin-top: 5rem; */
+	}
+}
+@media (max-width: 768px) {
+	.projects {
+		justify-content: space-evenly;
+	}
+	.projects .gallery {
+		grid-template-columns: repeat(1, 1fr);
+		margin-bottom: 1rem;
+	}
+	.projects .gallery img {
+		/* Only need to specify one */
+		width: 284px;
+		height: auto;
+	}
+	.about img {
+		transform: scale(0.8);
+	}
+	.top-nav {
+		justify-content: center;
+	}
+	.top-nav div {
+		margin: 0;
+	}
+}
+@media (max-width: 411px) {
+	.top-nav a {
+		margin: 0 0.5rem;
+	}
+	.landing .intro h1 {
+		font-size: 24px;
+	}
 }

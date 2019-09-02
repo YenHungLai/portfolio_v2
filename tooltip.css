@@ -3,7 +3,7 @@
     position: absolute;
     transform: translateX(30px) translateY(73px);
 	z-index: 1;
-	width: 300px;
+    width: 300px;
 	background-color: white;
 	color: black;
 	text-align: center;
@@ -20,4 +20,10 @@
 
 .projects a:hover .tooltip {
     opacity: 1;
+}
+@media (max-width: 768px) {
+	.tooltip {
+        width: 260px;
+        transform: translateX(12px) translateY(50px);
+    }
 }
