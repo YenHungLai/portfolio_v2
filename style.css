@@ -104,6 +104,7 @@ section h1 {
 	border-radius: 50%;
 }
 
+/* TODO: set max height so it does not get covered */
 .projects {
 	height: 100vh;
 	background-color: #f5f5f5;
@@ -166,8 +167,8 @@ section h1 {
 
 .up-arrows {
 	animation-iteration-count: infinite;
-	position: relative;
-	bottom: -25%;
+	position: absolute;
+	bottom: 100px;
 	color: red;
 }
 
