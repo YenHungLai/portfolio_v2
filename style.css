@@ -37,7 +37,13 @@ a {
 	align-items: center;
 	justify-content: space-evenly;
 	/* background-image: linear-gradient(to bottom right, #373b44, #4286f4); */
-	background-image: linear-gradient(to bottom, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);;
+	background-image: linear-gradient(
+		to bottom,
+		#0c3483 0%,
+		#a2b6df 100%,
+		#6b8cce 100%,
+		#a2b6df 100%
+	);
 	color: white;
 }
 .landing .intro {
@@ -74,7 +80,7 @@ a {
 
 /* Sections */
 section {
-	overflow: hidden;
+	overflow-y: auto;
 }
 section h1 {
 	text-transform: uppercase;
@@ -122,7 +128,7 @@ section h1 {
 .projects .gallery {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px;
+	gap: 10px;
 	margin-top: 2em;
 	position: relative;
 	opacity: 0;
@@ -211,10 +217,11 @@ section h1 {
 }
 @media (max-width: 768px) {
 	.projects {
-		justify-content: space-evenly;
+		/* justify-content: space-evenly; */
 	}
 	.projects .gallery {
 		grid-template-columns: repeat(1, 1fr);
+		row-gap: 2px;
 		margin-bottom: 1em;
 	}
 	.projects .gallery img {

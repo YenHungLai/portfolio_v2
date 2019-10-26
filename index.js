@@ -1,3 +1,7 @@
+/**
+ * TODO:
+ * - Project section, add source code and demo buttons, technologies used tags
+ */
 const container = document.querySelector('.container');
 const navAbout = document.querySelector('.top-nav a[href="#section-1"]');
 const navProjects = document.querySelector('.top-nav a[href="#section-2"]');
