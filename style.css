@@ -80,7 +80,7 @@ a {
 
 /* Sections */
 section {
-	overflow-y: auto;
+	/* overflow-y: auto; */
 }
 section h1 {
 	text-transform: uppercase;
@@ -124,6 +124,7 @@ section h1 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	overflow-y: auto;
 }
 .projects .gallery {
 	display: grid;

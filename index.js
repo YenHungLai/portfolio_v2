@@ -58,7 +58,7 @@ window.addEventListener('scroll', () => {
 		isScrolling = setTimeout(() => {
 			// console.log('not scrolling');
 			topNav.style.transform = 'translateY(-50px)';
-		}, 2000);
+		}, 1000);
 	}
 });
 
