@@ -63,6 +63,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Icon hover animation
+// FIXME: stopped working after putting inside div
 languageIcons.forEach(icon => {
 	icon.addEventListener('mouseover', () => {
 		icon.classList.add('animated', 'heartBeat');

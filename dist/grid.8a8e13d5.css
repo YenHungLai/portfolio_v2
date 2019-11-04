@@ -1,0 +1,14 @@
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+	background-color: black;
+    border: 1px solid red;
+    height: 300px;
+    width: 390px;
+}
+
+
+/*# sourceMappingURL=/grid.8a8e13d5.css.map */
