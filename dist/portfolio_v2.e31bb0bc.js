@@ -134,6 +134,7 @@ var languageIcons = document.querySelectorAll('.about i[class^="devicon"]');
 var topNav = document.querySelector('.top-nav');
 var diagram = document.querySelector('.diagram');
 var gallery = document.querySelector('.gallery');
+var galleryMobile = document.querySelector('.gallery-mobile');
 var isScrolling; // Highlight current section and auto hide navbar
 
 window.addEventListener('scroll', function () {
@@ -156,6 +157,8 @@ window.addEventListener('scroll', function () {
     });
     gallery.style.opacity = 1;
     gallery.style.transform = 'translateY(0)';
+    galleryMobile.style.opacity = 1;
+    galleryMobile.style.transform = 'translateY(0)';
   } else if (scrollRatio >= 0.19) {
     navAbout.style.color = '#ff3f74';
     [navProjects, navContacts].forEach(function (item) {
@@ -172,6 +175,8 @@ window.addEventListener('scroll', function () {
     diagram.style.transform = 'translateY(100px)';
     gallery.style.opacity = 0;
     gallery.style.transform = 'translateY(100px)';
+    galleryMobile.style.opacity = 0;
+    galleryMobile.style.transform = 'translateY(100px)';
     contactsText.style.display = 'none';
   }
 
@@ -192,7 +197,7 @@ languageIcons.forEach(function (icon) {
     icon.classList.remove('animated', 'heartBeat');
   });
 });
-},{}],"../../../../AppData/Roaming/nvm/v12.0.0/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -220,7 +225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60115" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59345" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -251,9 +256,8 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else if (location.reload) {
-        // `location` global exists in a web worker context but lacks `.reload()` function.
-        location.reload();
+      } else {
+        window.location.reload();
       }
     }
 
@@ -396,5 +400,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/nvm/v12.0.0/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/portfolio_v2.e31bb0bc.js.map

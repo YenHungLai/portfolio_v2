@@ -28,7 +28,7 @@
                 <h1>My name is <span>Yen-Hung Lai</span></h1><br>
                 <h1>I am a full stack web developer.</h1>
             </div>
-            <a target="_blank" href="/assets\resume_v3.pdf" class="btn">View my Resume</a>
+            <a target="_blank" href="/assets\resume_v4.pdf" class="btn">View my Resume</a>
             <!-- Use id selector to redirect -->
             <a href="#section-1" class="down-arrows animated bounce">
                 <i class="fas fa-angle-double-down fa-3x"></i>
@@ -88,14 +88,36 @@
         <section id="section-2" class="projects">
             <h1>Projects</h1>
             <div class="gallery">
-                <a href="/fish.337a0080.PNG" class="big"><span class="tooltip">Fish E-Commerce Application</span><img src="/fish.337a0080.PNG" alt="fish" title="<a style='color: white' target='_blank' href='https://fish-selling-app.firebaseapp.com'>Fish E-Commerce Application</a>">
+                <a href="/fish.337a0080.PNG" class="big"><span class="tooltip">Fish E-Commerce Application</span><img src="/fish.337a0080.PNG" alt="fish" title="<a style='color: white' target='_blank' href='https://fish-selling-app.firebaseapp.com'><i class='
+                        fas fa-external-link-alt'></i> Fish E-Commerce Application</a>">
                 </a>
-                <a href="/crawler.80d14b97.PNG" class="big"><span class="tooltip">Web Crawler Application</span><img src="/crawler.80d14b97.PNG" alt="crawler" title="<a style='color: white' target='_blank' href='https://my-crawler.netlify.com'>Web Crawler Application</a>">
+                <a href="/crawler.80d14b97.PNG" class="big"><span class="tooltip">Web Crawler Application</span><img src="/crawler.80d14b97.PNG" alt="crawler" title="<a style='color: white' target='_blank' href='https://my-crawler.netlify.com'><i class='
+                        fas fa-external-link-alt'></i> Web Crawler Application</a>">
                 </a>
-                <a href="/todo.09bc5edb.PNG" class="big"><span class="tooltip">Todo list Application</span><img src="/todo.09bc5edb.PNG" alt="todo" title="<a style='color: white' target='_blank' href='https://react-todo-items.netlify.com/'>Todo List Application</a>">
+                <a href="/todo.09bc5edb.PNG" class="big"><span class="tooltip">Todo list Application</span><img src="/todo.09bc5edb.PNG" alt="todo" title="<a style='color: white' target='_blank' href='https://react-todo-items.netlify.com/'><i class='
+                        fas fa-external-link-alt'></i> Todo List Application</a>">
                 </a>
                 <a href="/ign.c082bb3e.PNG" class="big"><span class="tooltip">IGN Code Foo 9 Application</span>
-                    <img src="/ign.c082bb3e.PNG" alt="todo" title="<a style='color: white' target='_blank' href='https://mycodefoo9.netlify.com/'>IGN Code Foo 9 Frontend Application</a>">
+                    <img src="/ign.c082bb3e.PNG" alt="todo" title="<a style='color: white' target='_blank' href='https://mycodefoo9.netlify.com/'><i class='
+                        fas fa-external-link-alt'></i> IGN Code Foo 9 Frontend Application</a>">
+                </a>
+                <!-- <a href="./assets/img/school.PNG" class="big"><span class="tooltip">School Security Evaluation
+                        Tool</span><img src="./assets/img/school.PNG" alt="school"
+                        title="<a style='color: white' target='_blank' href='https://capstone-spring-2019.gitlab.io/schoolprotector/#/'>School Security Evaluation Tool</a>"></a> -->
+            </div>
+            <div class="gallery-mobile">
+                <a href="/fish.337a0080.PNG" class="big"><span class="tooltip">Fish E-Commerce Application</span><img src="/fish.337a0080.PNG" alt="fish" title="<a style='color: white' target='_blank' href='https://fish-selling-app.firebaseapp.com'><i class='
+                        fas fa-external-link-alt'></i> Fish E-Commerce Application</a>">
+                </a>
+                <a href="/crawler.80d14b97.PNG" class="big"><span class="tooltip">Web Crawler Application</span><img src="/crawler.80d14b97.PNG" alt="crawler" title="<a style='color: white' target='_blank' href='https://my-crawler.netlify.com'><i class='
+                        fas fa-external-link-alt'></i> Web Crawler Application</a>">
+                </a>
+                <a href="/todo.09bc5edb.PNG" class="big"><span class="tooltip">Todo list Application</span><img src="/todo.09bc5edb.PNG" alt="todo" title="<a style='color: white' target='_blank' href='https://react-todo-items.netlify.com/'><i class='
+                        fas fa-external-link-alt'></i> Todo List Application</a>">
+                </a>
+                <a href="/ign.c082bb3e.PNG" class="big"><span class="tooltip">IGN Code Foo 9 Application</span>
+                    <img src="/ign.c082bb3e.PNG" alt="todo" title="<a style='color: white' target='_blank' href='https://mycodefoo9.netlify.com/'><i class='
+                        fas fa-external-link-alt'></i> IGN Code Foo 9 Frontend Application</a>">
                 </a>
                 <!-- <a href="./assets/img/school.PNG" class="big"><span class="tooltip">School Security Evaluation
                         Tool</span><img src="./assets/img/school.PNG" alt="school"
@@ -126,6 +148,13 @@
     widthRatio: 0.6,
     heightRatio: 0.7,
     disableScroll: false,
+    captionClass: 'sl-caption-addon'
+  });
+  var $galleryMobile = $('.gallery-mobile a').simpleLightbox({
+    preloading: true,
+    widthRatio: 1,
+    heightRatio: 1,
+    disableScroll: true,
     captionClass: 'sl-caption-addon'
   });
 });</script>

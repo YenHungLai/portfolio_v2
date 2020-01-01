@@ -14,6 +14,7 @@ const languageIcons = document.querySelectorAll('.about i[class^="devicon"]');
 const topNav = document.querySelector('.top-nav');
 const diagram = document.querySelector('.diagram');
 const gallery = document.querySelector('.gallery');
+const galleryMobile = document.querySelector('.gallery-mobile');
 
 let isScrolling;
 // Highlight current section and auto hide navbar
@@ -35,22 +36,22 @@ window.addEventListener('scroll', () => {
 		[navAbout, navContacts].forEach(item => (item.style.color = 'white'));
 		gallery.style.opacity = 1;
 		gallery.style.transform = 'translateY(0)';
+		galleryMobile.style.opacity = 1;
+		galleryMobile.style.transform = 'translateY(0)';
 	} else if (scrollRatio >= 0.19) {
 		navAbout.style.color = '#ff3f74';
-		[navProjects, navContacts].forEach(
-			item => (item.style.color = 'white')
-		);
+		[navProjects, navContacts].forEach(item => (item.style.color = 'white'));
 		diagram.style.opacity = 1;
 		diagram.style.transform = 'translateY(0)';
 	} else {
-		[navAbout, navProjects, navContacts].forEach(
-			item => (item.style.color = 'white')
-		);
+		[navAbout, navProjects, navContacts].forEach(item => (item.style.color = 'white'));
 		// Reset values for transition
 		diagram.style.opacity = 0;
 		diagram.style.transform = 'translateY(100px)';
 		gallery.style.opacity = 0;
 		gallery.style.transform = 'translateY(100px)';
+		galleryMobile.style.opacity = 0;
+		galleryMobile.style.transform = 'translateY(100px)';
 		contactsText.style.display = 'none';
 	}
 
