@@ -203,6 +203,9 @@ section h1 {
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 	z-index: 3;
 }
+.projects a {
+	position: relative;
+}
 /* .projects .gallery a::before {
 	content: '';
 	position: absolute;
@@ -286,12 +289,6 @@ section h1 {
 		grid-template-columns: repeat(1, 1fr);
 		row-gap: 2px;
 		margin-bottom: 1em;
-	}
-	.projects .gallery img {
-		/* Only need to specify one */
-		/* FIXME: imgs do not have the same height */
-		width: 284px;
-		height: auto;
 	}
 	.about img {
 		transform: scale(0.8);
