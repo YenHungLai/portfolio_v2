@@ -80,7 +80,6 @@ a {
 
 /* Sections */
 section {
-	/* overflow-y: auto; */
 }
 section h1 {
 	text-transform: uppercase;
@@ -88,11 +87,19 @@ section h1 {
 }
 
 .about {
+	position: relative;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+.about .description {
+	font-family: Montserrat;
+	margin-top: 1em;
+	min-width: 370px;
+	width: 45%;
+	line-height: 2rem;
 }
 .about .diagram {
 	display: flex;
@@ -104,10 +111,14 @@ section h1 {
 	transform: translateY(100px);
 	transition: all 0.7s ease-in;
 }
-/* Tooltip for programming language icons */
-.about .diagram div {
-	position: relative;
+.about .icons {
+	display: flex;
+	margin-top: 1em;
 }
+.about div {
+	transition: all 5s ease-out;
+}
+/* Tooltip for programming language icons */
 .about .tooltip-txt {
 	opacity: 0;
 	background-color: black;
@@ -138,7 +149,6 @@ section h1 {
 
 .about i[class^='devicon'] {
 	font-size: 6rem;
-	margin: 0 25px;
 }
 .about img {
 	width: 222px;

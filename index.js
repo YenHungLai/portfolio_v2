@@ -12,7 +12,8 @@ const contacts = document.querySelector('section[class="contacts"]');
 const contactsText = document.querySelector('.contacts div');
 const languageIcons = document.querySelectorAll('.about i[class^="devicon"]');
 const topNav = document.querySelector('.top-nav');
-const diagram = document.querySelector('.diagram');
+// const diagram = document.querySelector('.diagram');
+const description = document.querySelector('.about .description');
 const gallery = document.querySelector('.gallery');
 const galleryMobile = document.querySelector('.gallery-mobile');
 
@@ -41,13 +42,13 @@ window.addEventListener('scroll', () => {
 	} else if (scrollRatio >= 0.19) {
 		navAbout.style.color = '#ff3f74';
 		[navProjects, navContacts].forEach(item => (item.style.color = 'white'));
-		diagram.style.opacity = 1;
-		diagram.style.transform = 'translateY(0)';
+		// diagram.style.opacity = 1;
+		// diagram.style.transform = 'translateY(0)';
 	} else {
 		[navAbout, navProjects, navContacts].forEach(item => (item.style.color = 'white'));
 		// Reset values for transition
-		diagram.style.opacity = 0;
-		diagram.style.transform = 'translateY(100px)';
+		// diagram.style.opacity = 0;
+		// diagram.style.transform = 'translateY(100px)';
 		gallery.style.opacity = 0;
 		gallery.style.transform = 'translateY(100px)';
 		galleryMobile.style.opacity = 0;
@@ -73,3 +74,23 @@ languageIcons.forEach(icon => {
 		icon.classList.remove('animated', 'heartBeat');
 	});
 });
+
+const getRandInteger = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+// Icons randomly float effect.
+const icons = document.querySelectorAll('.about div');
+const descriptionPos = description.getBoundingClientRect();
+
+// const moveIcon = icon => {
+// 	const leftVal = getRandInteger(50, about.clientWidth - 147);
+// 	const topVal = getRandInteger(50, about.clientHeight - 0);
+// 	if (leftVal < descriptionPos.left || leftVal > descriptionPos.right)
+// 		icon.style.left = leftVal + 'px';
+// 	if (topVal < descriptionPos.top || topVal > descriptionPos.bottom)
+// 		icon.style.top = topVal + 'px';
+// 	const val = getRandInteger(10, 15);
+// 	icon.style.transitionDuration = val + 's';
+// 	setTimeout(moveIcon.bind(this, icon), val * 1000);
+// };
+
+// icons.forEach(icon => moveIcon(icon));

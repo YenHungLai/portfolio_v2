@@ -80,7 +80,6 @@ a {
 
 /* Sections */
 section {
-	/* overflow-y: auto; */
 }
 section h1 {
 	text-transform: uppercase;
@@ -88,6 +87,7 @@ section h1 {
 }
 
 .about {
+	position: relative;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -106,7 +106,8 @@ section h1 {
 }
 /* Tooltip for programming language icons */
 .about .diagram div {
-	position: relative;
+	position: absolute;
+	transition: all 3s ease;
 }
 .about .tooltip-txt {
 	opacity: 0;
