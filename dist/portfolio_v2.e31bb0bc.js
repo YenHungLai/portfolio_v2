@@ -131,10 +131,12 @@ var projects = document.querySelector('section[class="projects"]');
 var contacts = document.querySelector('section[class="contacts"]');
 var contactsText = document.querySelector('.contacts div');
 var languageIcons = document.querySelectorAll('.about i[class^="devicon"]');
-var topNav = document.querySelector('.top-nav');
-var diagram = document.querySelector('.diagram');
+var topNav = document.querySelector('.top-nav'); // const diagram = document.querySelector('.diagram');
+
+var description = document.querySelector('.about .description');
 var gallery = document.querySelector('.gallery');
 var galleryMobile = document.querySelector('.gallery-mobile');
+var icons = document.querySelector('.about .icons');
 var isScrolling; // Highlight current section and auto hide navbar
 
 window.addEventListener('scroll', function () {
@@ -163,20 +165,28 @@ window.addEventListener('scroll', function () {
     navAbout.style.color = '#ff3f74';
     [navProjects, navContacts].forEach(function (item) {
       return item.style.color = 'white';
-    });
-    diagram.style.opacity = 1;
-    diagram.style.transform = 'translateY(0)';
+    }); // diagram.style.opacity = 1;
+    // diagram.style.transform = 'translateY(0)';
+
+    description.style.opacity = 1;
+    description.style.transform = 'translateY(0)';
+    icons.style.opacity = 1;
+    icons.style.transform = 'translateY(0)';
   } else {
     [navAbout, navProjects, navContacts].forEach(function (item) {
       return item.style.color = 'white';
     }); // Reset values for transition
+    // diagram.style.opacity = 0;
+    // diagram.style.transform = 'translateY(100px)';
 
-    diagram.style.opacity = 0;
-    diagram.style.transform = 'translateY(100px)';
     gallery.style.opacity = 0;
     gallery.style.transform = 'translateY(100px)';
     galleryMobile.style.opacity = 0;
     galleryMobile.style.transform = 'translateY(100px)';
+    description.style.opacity = 0;
+    description.style.transform = 'translateY(100px)';
+    icons.style.opacity = 0;
+    icons.style.transform = 'translateY(100px)';
     contactsText.style.display = 'none';
   }
 
@@ -197,6 +207,24 @@ languageIcons.forEach(function (icon) {
     icon.classList.remove('animated', 'heartBeat');
   });
 });
+
+var getRandInteger = function getRandInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}; // Icons randomly float effect.
+
+
+var descriptionPos = description.getBoundingClientRect(); // const moveIcon = icon => {
+// 	const leftVal = getRandInteger(50, about.clientWidth - 147);
+// 	const topVal = getRandInteger(50, about.clientHeight - 0);
+// 	if (leftVal < descriptionPos.left || leftVal > descriptionPos.right)
+// 		icon.style.left = leftVal + 'px';
+// 	if (topVal < descriptionPos.top || topVal > descriptionPos.bottom)
+// 		icon.style.top = topVal + 'px';
+// 	const val = getRandInteger(10, 15);
+// 	icon.style.transitionDuration = val + 's';
+// 	setTimeout(moveIcon.bind(this, icon), val * 1000);
+// };
+// icons.forEach(icon => moveIcon(icon));
 },{}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -225,7 +253,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61753" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51052" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
