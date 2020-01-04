@@ -16,6 +16,7 @@ const topNav = document.querySelector('.top-nav');
 const description = document.querySelector('.about .description');
 const gallery = document.querySelector('.gallery');
 const galleryMobile = document.querySelector('.gallery-mobile');
+const icons = document.querySelector('.about .icons');
 
 let isScrolling;
 // Highlight current section and auto hide navbar
@@ -44,6 +45,10 @@ window.addEventListener('scroll', () => {
 		[navProjects, navContacts].forEach(item => (item.style.color = 'white'));
 		// diagram.style.opacity = 1;
 		// diagram.style.transform = 'translateY(0)';
+		description.style.opacity = 1;
+		description.style.transform = 'translateY(0)';
+		icons.style.opacity = 1;
+		icons.style.transform = 'translateY(0)';
 	} else {
 		[navAbout, navProjects, navContacts].forEach(item => (item.style.color = 'white'));
 		// Reset values for transition
@@ -53,6 +58,10 @@ window.addEventListener('scroll', () => {
 		gallery.style.transform = 'translateY(100px)';
 		galleryMobile.style.opacity = 0;
 		galleryMobile.style.transform = 'translateY(100px)';
+		description.style.opacity = 0;
+		description.style.transform = 'translateY(100px)';
+		icons.style.opacity = 0;
+		icons.style.transform = 'translateY(100px)';
 		contactsText.style.display = 'none';
 	}
 
@@ -78,7 +87,6 @@ languageIcons.forEach(icon => {
 const getRandInteger = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 // Icons randomly float effect.
-const icons = document.querySelectorAll('.about div');
 const descriptionPos = description.getBoundingClientRect();
 
 // const moveIcon = icon => {
