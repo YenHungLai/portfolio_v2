@@ -300,8 +300,8 @@ section h1 {
 	}
 }
 @media (max-width: 768px) {
-	.projects {
-		/* justify-content: space-evenly; */
+	.projects > h1 {
+		margin-top: 1em;
 	}
 	.projects .gallery,
 	.projects .gallery-mobile {
