@@ -1,6 +1,6 @@
 # My Developer Portfolio
 
-A place to view my resume and to showcase the projects I built.
+A place to view my projects and resume.
 
 # Built with
 - HTML
