@@ -7,6 +7,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 }
@@ -24,10 +28,6 @@ a {
 	/* Set to relative so footer will be at the bottom */
 	position: relative;
 	height: 100%;
-	/* overflow: hidden; */
-	/* FIXME: smooth scroll not working */
-	/* scroll-behavior: smooth; 
-	scroll-snap-type: y mandatory; */
 }
 
 .landing {
